@@ -15,30 +15,28 @@ attr_accessor :books
   end
 
   def get_book_info_rental(book_name)
-    for book in @books
-      if book[:title] == book_name
-        return book[:rental_details]
-      end
-    end
+    book_details = get_book_info(book_name)
+    return book_details[:rental_details]
   end
 
-  def add_book(new_book)
-    new_book[:rental_details] =
+  def add_book(new_book_title)
+    new_book =
     {
-       student_name: "",
-       date: ""
-     }
+        title: new_book_title,
+        rental_details: {
+          student_name: "",
+          date: ""
+        }
+    }
     @books << new_book
   end
 
   def change_book_details(book_name,new_student,new_date)
 
-    for book in @books
-      if book[:title] == book_name
-        book[:rental_details][:student_name] = new_student
-        book[:rental_details][:date] = new_date
-      end
-    end
+    book_to_change = get_book_info_rental(book_name)
+    book_to_change[:student_name] = new_student
+    book_to_change[:date] = new_date
+
   end
 
 end

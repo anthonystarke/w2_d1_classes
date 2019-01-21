@@ -28,7 +28,7 @@ class TestBankAccount < MiniTest::Test
           date: "21/11/11"
       }
     }
-    ]
+  ]
 
     @my_library = LibraryClass.new(@list_of_books)
   end
@@ -65,7 +65,7 @@ class TestBankAccount < MiniTest::Test
          date: ""
        }
     }
-    @my_library.add_book(book_to_test)
+    @my_library.add_book("Jaws")
     assert_equal(book_to_test,@my_library.get_book_info('Jaws'))
   end
 

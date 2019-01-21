@@ -22,8 +22,8 @@ class SportsTeam
     return false
   end
 
-  def team_win_or_lose(result)
-    if result.downcase == "win"
+  def points_for_a_win(result)
+    if result.downcase == "won"
       @points += 1
     end
   end
