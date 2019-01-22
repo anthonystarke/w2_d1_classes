@@ -1,7 +1,5 @@
 class StudentClass
 
-  # attr_accessor :name, :cohort
-
   def initialize(name, cohort)
     @name = name
     @cohort = cohort
@@ -25,7 +23,7 @@ class StudentClass
 
   def student_can_talk
     return "I can talk!"
-  end
+  end 
 
   def say_favourite_language(language)
     return "I love #{language}!"

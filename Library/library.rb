@@ -32,11 +32,9 @@ attr_accessor :books
   end
 
   def change_book_details(book_name,new_student,new_date)
-
     book_to_change = get_book_info_rental(book_name)
     book_to_change[:student_name] = new_student
     book_to_change[:date] = new_date
-
   end
 
 end

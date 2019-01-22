@@ -57,7 +57,6 @@ class TestBankAccount < MiniTest::Test
   end
 
   def test_add_book
-
     book_to_test = {
       title: "Jaws",
       rental_details: {
@@ -70,7 +69,6 @@ class TestBankAccount < MiniTest::Test
   end
 
   def test_change_rental_details
-
     book_to_test = {
       title: "PhatCat",
       rental_details: {
@@ -80,7 +78,6 @@ class TestBankAccount < MiniTest::Test
     }
     @my_library.change_book_details("PhatCat","Johny English","01/01/19")
     assert_equal(book_to_test, @my_library.get_book_info('PhatCat'))
-
   end
 
 end
